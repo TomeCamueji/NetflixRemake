@@ -26,7 +26,7 @@ class MovAdapter(private val movies:List<Movie>): RecyclerView.Adapter<MovAdapte
     inner class MovViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bild(mov:Movie){
             val Image:ImageView = itemView.findViewById(R.id.img_foto)
-            Image.setImageResource(mov.coverUrl)
+          //  Image.setImageResource(mov.coverUrl)
         }
     }
 }

@@ -10,7 +10,7 @@
 
    <ImageView
        android:id="@+id/img_foto"
-       android:src="@drawable/movie_4"
+       android:src="@drawable/placeholder"
        android:layout_width="0dp"
        android:scaleType="centerCrop"
        app:layout_constraintStart_toStartOf="parent"
