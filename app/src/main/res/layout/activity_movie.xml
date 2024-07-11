@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
@@ -24,5 +30,75 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"/>
 
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_play"
+       app:layout_constraintTop_toTopOf="@id/movie_img"
+        app:layout_constraintBottom_toBottomOf="@id/movie_img"
+        app:layout_constraintStart_toStartOf="@id/movie_img"
+        app:layout_constraintEnd_toEndOf="@id/movie_img"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="104dp" />
+    <TextView
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/movie_img"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18dp"
+        tools:text="A Saga não para"
+        android:textColor="@color/white"
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/movie_img"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="1dp"
+        android:maxLines="3"
+        tools:text="O filme segue Bruce Wayne, um bilionário que combate o crime em Gotham City sob o alter ego de Batman. Enfrentando criminosos, corruptos e vilões como o Charada, Batman lida com seus demônios internos enquanto tenta descobrir a verdade por trás de uma série de crimes complexos."
+        android:ellipsize="end"
+        android:textColor="@color/grey_light"
+        android:id="@+id/txt_destrition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/txt_destrition"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="3dp"
+        tools:text="akjkjfkjbnkgjng"
+        android:lineSpacingExtra="1dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/dark_grey"
+        android:id="@+id/txt_cast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+    app:layout_constraintTop_toBottomOf="@id/txt_cast"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/white"
+    android:id="@+id/txt_newmov"
+    android:text="@string/options"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_rv_similar"
+        tools:listitem="@layout/category2_item"
+        tools:itemCount="10"
+        app:layout_constraintTop_toBottomOf="@id/txt_newmov"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

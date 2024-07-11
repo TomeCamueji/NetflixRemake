@@ -4,13 +4,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.netflixremake.model.Movie
 
 //aqui é a lista horizontal
-class MovAdapter(private val movies:List<Movie>): RecyclerView.Adapter<MovAdapter.MovViewHolder>(){
+class MovAdapter(
+    private val movies:List<Movie>,
+    @LayoutRes private val layoutId:Int
+): RecyclerView.Adapter<MovAdapter.MovViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.move_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(layoutId,parent,false)
         return MovViewHolder(view)
     }
 

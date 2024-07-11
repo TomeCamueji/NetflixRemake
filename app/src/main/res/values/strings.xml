@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NetflixRemake</string>
+    <string name="cast">Elenco: %1$s</string>
+    <string name="options">OPEÇÕES SEMELHANTES</string>
+    <string name="title">Batman Bing</string>
+    <string name="descrition"> Com uma atmosfera noir e uma abordagem mais realista,
+        o filme aprofunda o caráter e os desafios do Cavaleiro das Trevas.</string>
+
+
 </resources>

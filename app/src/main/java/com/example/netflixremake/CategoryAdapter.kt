@@ -33,7 +33,7 @@ class CategoryAdapter(private val categories:List<category>): RecyclerView.Adapt
 
             val RvCategory:RecyclerView = itemView.findViewById(R.id.rv_category)
             RvCategory.layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL,false)
-            RvCategory.adapter = MovAdapter(Category.movies)
+            RvCategory.adapter = MovAdapter(Category.movies,R.layout.move_item)
         }
     }
 }

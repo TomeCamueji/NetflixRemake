@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflixremake.Util.CategoryTesk
 import com.example.netflixremake.model.Movie
 import com.example.netflixremake.model.category
 
@@ -17,20 +18,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val categories = mutableListOf<category>()
-        for (j in 0 until 50){
-            val movies = mutableListOf<Movie>()
-            for (i in 0 until 10){
-               val movie = Movie(R.drawable.mov_1)
-                movies.add(movie)
-            }
-            val Category = category("Programas infantil $j",movies)
-            categories.add(Category)
-        }
-
         val adapter = CategoryAdapter(categories)
-        val rv:RecyclerView = findViewById(R.id.rv_main)
-            rv.layoutManager = LinearLayoutManager(this)
+        val rv: RecyclerView = findViewById(R.id.rv_main)
+        rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
+
+        CategoryTesk().execute("https://api.tiagoaguiar.co/netflixapp/home?apiKey=687c00d2-ca11-4077-94e5-80475205bb8c")
     }
 
 
